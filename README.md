@@ -1,4 +1,4 @@
-# VMS Design System
+# UIT components for VMS
 
 A lightweight, framework-free dashboard template and a growing design system for enterprise interfaces.
 
@@ -63,7 +63,3 @@ Open `index.html` in a browser. Fonts and Font Awesome icons load from third-par
 ## Project status
 
 Early work in progress. This is a UI demo, not a production-ready component library or completed accessibility audit.
-
-## License
-
-MIT — see [LICENSE](LICENSE).
