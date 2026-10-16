@@ -1,4 +1,4 @@
-# UIT components for VMS
+# UI components for VMS
 
 A lightweight, framework-free dashboard template and a growing design system for enterprise interfaces.
 
