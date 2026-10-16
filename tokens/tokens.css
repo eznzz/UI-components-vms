@@ -1,0 +1,49 @@
+/* VMS Design System v0.4 — single source of truth for shared semantic tokens. */
+:root {
+  --vms-font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  --vms-color-primary: #24518F;
+  --vms-color-primary-hover: #1B4074;
+  --vms-color-primary-active: #172F51;
+  --vms-color-on-primary: #FFFFFF;
+  --vms-color-text: #32373C;
+  --vms-color-muted: #6B7280;
+  --vms-color-canvas: #EEF2F6;
+  --vms-color-surface: #FFFFFF;
+  --vms-color-surface-subtle: #F7F9FC;
+  --vms-color-border: #CBD5E1;
+  --vms-color-focus: #24518F;
+  --vms-color-focus-ring: rgba(36, 81, 143, .18);
+  --vms-color-error: #B42330;
+  --vms-color-success: #067647;
+  --vms-color-input-bg: #FFFFFF;
+  --vms-color-input-disabled-bg: #F1F5F9;
+  --vms-input-height: 40px;
+  --vms-input-radius: 6px;
+  --vms-input-font-size: 14px;
+  --vms-input-padding-x: 12px;
+  --vms-status-in-transit: #2563EB;
+  --vms-status-in-port: #059669;
+  --vms-status-maintenance: #D97706;
+}
+body.dark {
+  color-scheme: dark;
+  --vms-color-primary: #81B4F1;
+  --vms-color-primary-hover: #A4CAFA;
+  --vms-color-primary-active: #C8DEFF;
+  --vms-color-on-primary: #111827;
+  --vms-color-text: #E5E7EB;
+  --vms-color-muted: #9CA3AF;
+  --vms-color-canvas: #111827;
+  --vms-color-surface: #1F2937;
+  --vms-color-surface-subtle: #263344;
+  --vms-color-border: #4B5563;
+  --vms-color-focus: #81B4F1;
+  --vms-color-focus-ring: rgba(129, 180, 241, .22);
+  --vms-color-error: #FFA8AE;
+  --vms-color-success: #6CE0B0;
+  --vms-color-input-bg: #111827;
+  --vms-color-input-disabled-bg: #263344;
+  --vms-status-in-transit: #60A5FA;
+  --vms-status-in-port: #34D399;
+  --vms-status-maintenance: #FBBF24;
+}

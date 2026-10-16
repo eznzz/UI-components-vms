@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VMS Dashboard — дизайн-система административных интерфейсов">
+  <title>VMS Dashboard Template</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2324518f'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold' font-size='14'%3EV%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tokens/tokens.css?v=0.6.2">
+  <link rel="stylesheet" href="style.css?v=0.6.2">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__logo"><div class="sidebar__logo-mark"><i class="fa-solid fa-ship"></i></div><span class="sidebar__logo-text">VMS</span></div>
+    <nav class="sidebar__nav" aria-label="Основная навигация">
+      <ul>
+        <li><a href="#" class="active" aria-current="page"><i class="fa-solid fa-house icon"></i><span>Главная</span></a></li>
+        <li><a href="#"><i class="fa-solid fa-chart-line icon"></i><span>Отчёты</span></a></li>
+        <li><a href="#"><i class="fa-solid fa-users icon"></i><span>Пользователи</span></a></li>
+        <li><a href="#"><i class="fa-solid fa-gear icon"></i><span>Настройки</span></a></li>
+        <li><a href="#"><i class="fa-solid fa-folder-open icon"></i><span>Документы</span></a></li>
+      </ul>
+    </nav>
+    <div class="sidebar__footer"><span>© 2026 VMS</span><span class="sidebar__version">v0.2.0</span></div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+  <div class="main">
+    <header class="topbar">
+      <div class="topbar__left">
+        <button class="burger" id="burger" aria-controls="sidebar" aria-expanded="false" aria-label="Открыть меню" type="button"><i class="fa-solid fa-bars"></i></button>
+        <h1 class="topbar__title">Панель управления</h1>
+      </div>
+      <div class="user-menu" id="userMenu">
+        <button class="user-menu__trigger" id="userTrigger" aria-controls="userDropdown" aria-expanded="false" type="button">
+          <div class="avatar" aria-hidden="true">А</div><span class="name">Администратор</span><i class="fa-solid fa-chevron-down caret" aria-hidden="true"></i>
+        </button>
+        <div class="user-menu__dropdown" id="userDropdown">
+          <div class="user-menu__header"><div class="avatar">А</div><div class="info"><strong>Администратор</strong><small>admin@example.com</small></div></div>
+          <ul class="user-menu__list">
+            <li><a href="#"><i class="fa-solid fa-user icon"></i> Мой профиль</a></li>
+            <li><a href="#"><i class="fa-solid fa-sliders icon"></i> Настройки аккаунта</a></li>
+            <li><a href="#"><i class="fa-solid fa-bell icon"></i> Уведомления</a></li>
+            <li class="divider" aria-hidden="true"></li>
+            <li><button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false"><span><i class="fa-solid fa-moon icon" id="themeIcon"></i><span id="themeLabel">Тёмная тема</span></span><span class="theme-toggle__switch" aria-hidden="true"></span></button></li>
+            <li class="divider" aria-hidden="true"></li>
+            <li><a href="#" class="danger"><i class="fa-solid fa-right-from-bracket icon"></i> Выйти</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="content">
+      <section class="content__card">
+        <h2>Добро пожаловать в VMS Dashboard</h2>
+        <p>Стартовый шаблон панели управления и основа дизайн-системы.</p>
+        <div class="form-row">
+          <label for="demo">Название судна</label>
+          <input type="text" id="demo" placeholder="Например, Aurora" autocomplete="off">
+        </div>
+        <button class="btn" type="button"><i class="fa-solid fa-floppy-disk" aria-hidden="true"></i> Сохранить</button>
+      </section>
+      <section class="content__card">
+        <h2>Ещё одна карточка</h2>
+        <p>Контент может быть любым — таблицы, формы, графики.</p>
+      </section>
+    </main>
+  </div>
+</div>
+<script src="script.js?v=0.6.2"></script>
+</body>
+</html>

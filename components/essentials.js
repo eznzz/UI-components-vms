@@ -1,0 +1,8 @@
+(()=>{'use strict';const $=id=>document.getElementById(id);
+const search=$('essential-search'),filter=$('essential-filter'),clear=$('essential-clear');
+const summary=()=>{$('essential-summary').textContent=search.value||filter.value?('Фильтры: '+[search.value.trim(),filter.value].filter(Boolean).join(' · ')):'Нет активных фильтров'};
+search.addEventListener('input',summary);filter.addEventListener('change',summary);clear.addEventListener('click',()=>{search.value='';filter.value='';summary();search.focus()});
+const from=$('date-from'),to=$('date-to');function dates(){to.min=from.value||'';from.max=to.value||'';const invalid=!!(from.value&&to.value&&from.value>to.value);$('date-summary').textContent=invalid?'Дата окончания должна быть позже начала':(from.value&&to.value?'Период: '+from.value+' — '+to.value:'Укажите период');}from.addEventListener('change',dates);to.addEventListener('change',dates);
+const sw=$('essential-switch');function mode(){const selected=document.querySelector('input[name="view-mode"]:checked');$('essential-mode').textContent=(sw.checked?'Уведомления включены':'Уведомления выключены')+' · '+(selected.value==='compact'?'Компактный':'Комфортный');}sw.addEventListener('change',mode);document.querySelectorAll('input[name="view-mode"]').forEach(i=>i.addEventListener('change',mode));
+const code=$('essential-code'),help=$('essential-code-help');code.addEventListener('input',()=>{const v=code.value.trim();const invalid=v.length>0&&v.length<3;code.setAttribute('aria-invalid',String(invalid));help.textContent=!v?'Введите код для проверки.':invalid?'Не менее 3 символов.':'Длина кода подходит.';help.classList.toggle('error-text',invalid);});
+})();
